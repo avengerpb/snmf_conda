@@ -1,0 +1,16 @@
+
+requirements:
+  run:
+    - perl
+    - perl-bioperl
+    - gcc
+
+package:
+  name: snmf
+  version: 1.0.0
+
+source:
+ - git_url: https://github.com/avengerpb/snmf_conda
+   folder: git
+ - url: http://membres-timc.imag.fr/Olivier.Francois/snmf/files/sNMF_CL_v1.2.zip
+   folder: temp
