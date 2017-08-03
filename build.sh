@@ -16,5 +16,4 @@ make $snmf/install.command
 chmod 777 $snmf/Snmf.pl
 mkdir -p $PREFIX/bin
 mkdir -p $PREFIX/opt/var
-ln -s /tool/bin/sNMF /usr/bin/
-
+export PATH=$snmf:$PATH >> ./bashrc
