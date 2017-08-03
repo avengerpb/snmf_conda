@@ -10,12 +10,12 @@ groups=$8
 threshold_group=$9
 
 directory=`dirname $0`
-mkdir /tool/tmpdir$$
+mkdir tmpdir$$
 
-snmf -i $vcf -o $outputs -k $kmin -m $kmax -d /tool/tmpdir$$ -t $threshold_group
+snmf -i $vcf -o $outputs -k $kmin -m $kmax -d ./tmpdir$$ -t $threshold_group
 
-mv /tool/tmpdir$$/output $best_k_output
-mv /tool/tmpdir$$/log $best_k_logfile
-mv /tool/tmpdir$$/outputs.Q $outputs
-mv /tool/tmpdir$$/logs $logs
-mv /tool/tmpdir$$/groups $groups
+mv ./tmpdir$$/output $best_k_output
+mv ./tmpdir$$/log $best_k_logfile
+mv ./tmpdir$$/outputs.Q $outputs
+mv ./tmpdir$$/logs $logs
+mv ./tmpdir$$/groups $groups

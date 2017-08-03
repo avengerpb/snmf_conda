@@ -33,11 +33,11 @@ die $usage
   if ( !$input || !$output || !$kmin || !$kmax || !$directory || !$threshold);
   
 
-my $PLINK_EXE = "/tool/plink";
+my $PLINK_EXE = "./plink";
 
 system("$PLINK_EXE --vcf $input --allow-extra-chr --recode vcf-fid --out $directory/input >>$directory/logs 2>&1");
 
-system("/tool/bin/vcf2geno $directory/input.vcf $directory/polymorphisms.geno >>$directory/logs 2>&1");
+system("./bin/vcf2geno $directory/input.vcf $directory/polymorphisms.geno >>$directory/logs 2>&1");
 
 
 my $ind_cmd = `grep '#CHROM' $input`;
