@@ -1,6 +1,7 @@
 #!/bin/bash
 apt-get install libswitch-perl -y
 apt-get install build-essential -y
+apt-get install bioperl -y
 snmf=$PREFIX/opt/$PKG_NAME-$PKG_VERSION
 mkdir -p $snmf
 cp -r temp/* $snmf/
@@ -16,4 +17,4 @@ make $snmf/install.command
 chmod 777 $snmf/Snmf.pl
 mkdir -p $PREFIX/bin
 mkdir -p $PREFIX/opt/var
-export PATH=$snmf:$PATH >> ./bashrc
+export PATH=$snmf:$PATH >> ./bash_profile
