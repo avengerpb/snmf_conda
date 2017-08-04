@@ -12,7 +12,7 @@ threshold_group=$9
 directory=`dirname $0`
 mkdir tmpdir$$
 
-snmf -i $vcf -o $outputs -k $kmin -m $kmax -d ./tmpdir$$ -t $threshold_group
+Perl ./Snmf.pl -i $vcf -o $outputs -k $kmin -m $kmax -d ./tmpdir$$ -t $threshold_group
 
 mv ./tmpdir$$/output $best_k_output
 mv ./tmpdir$$/log $best_k_logfile
