@@ -19,9 +19,9 @@ package:
   version: 1.0.0
 
 source:
- - url: https://github.com/avengerpb/snmf_conda/archive/1.0.tar.gz
+ - url: https://github.com/avengerpb/snmf_conda/archive/1.1.tar.gz
    folder: git
-   md5: 30ac757e1acb408221bd57882bd227b2
+   md5: 8800996b38adb56043ffed0c8335f4c2
  - url: http://membres-timc.imag.fr/Olivier.Francois/snmf/files/sNMF_CL_v1.2.zip
    folder: temp
-   md5 713c30e00710db617ae64dd0eccc1a53
+   md5: 713c30e00710db617ae64dd0eccc1a53
