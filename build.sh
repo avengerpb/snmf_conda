@@ -1,7 +1,4 @@
 #!/bin/bash
-apt-get install libswitch-perl -y
-apt-get install build-essential -y
-apt-get install bioperl -y
 snmf=$PREFIX/opt/$PKG_NAME-$PKG_VERSION
 mkdir -p $snmf
 cp -r temp/* $snmf/

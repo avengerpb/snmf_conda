@@ -10,9 +10,9 @@ build:
 
 requirements:
   run:
-    - perl
     - perl-bioperl
     - gcc
+    - perl-lib
 
 package:
   name: snmf
@@ -25,3 +25,7 @@ source:
  - url: http://membres-timc.imag.fr/Olivier.Francois/snmf/files/sNMF_CL_v1.2.zip
    folder: temp
    md5: 280df791c1c50ac15244cc86f6abf69e
+
+test:
+ command:
+  /snmf.sh test.vcf out logs k_out k_log 2 5 abc
