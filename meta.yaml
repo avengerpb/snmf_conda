@@ -19,8 +19,8 @@ package:
   version: 1.0.0
 
 source:
-   fn: 1.5.tar.gz
-   url: https://github.com/avengerpb/snmf_conda/archive/1.5.tar.gz
+   fn: 1.6.tar.gz
+   url: https://github.com/avengerpb/snmf_conda/archive/1.6.tar.gz
    md5: f56a662812203d0046ae435ae3eb0494
 
 test:
