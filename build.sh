@@ -1,16 +1,16 @@
-#!/bin/bash
+ #!/bin/bash
 
-snmf=$PREFIX/opt/$PKG_NAME-$PKG_VERSION
-mkdir -p $snmf
+snmf=$PREFIX/opt/snmf
 mkdir -p $PREFIX/bin
-cp -r ./* $PREFIX/bin
-sed -i.bak '1 s|^.*$|#!/usr/bin/env perl|g' $PREFIX/bin/Snmf.pl
-rm -f $PREFIX/bin/Snmf.bak
-rm -rf $snmf/git
-rm -rf $snmf/temp
-chmod +x $PREFIX/bin/snmf.sh
-chmod +x $PREFIX/bin/plink
-chmod +x $PREFIX/bin/install.command
-bash $PREFIX/bin/install.command
-chmod 777 $PREFIX/bin/Snmf.pl
-mkdir -p $PREFIX/bin/opt/var
+cp -r temp/*  $snmf
+sed -i.bak '1 s|^.*$|#!/usr/bin/env perl|g' $snmf/Snmf.pl
+rm -f $snmf/Snmf.bak
+unzip $snmf/*.zip
+mv sNMF_CL_v1.2.zip/* $snmf/
+rm -rf temp
+chmod +x $snmf/snmf.sh
+chmod +x $snmf/plink
+chmod +x $snmf/install.command
+bash $snmf/install.command
+chmod 777 $snmf/Snmf.pl
+cp $snmf/snmf.sh $PREFIX/bin/
