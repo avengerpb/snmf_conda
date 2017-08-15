@@ -21,7 +21,7 @@ package:
 source:
    fn: 1.1.tar.gz
    url: https://github.com/avengerpb/snmf_conda/archive/1.1.tar.gz
-   md5: fcfc82fd3cef0b0a8ca357986a0bdcc1
+   md5: d8340078bbc10854ec09a5149952b3c6
    folder: temp
 
 test:
