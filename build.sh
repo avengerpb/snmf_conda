@@ -1,14 +1,12 @@
  #!/bin/bash
 
-snmf=$PREFIX/opt/snmf/
-chmod 777 $PREFIX/opt/snmf/
+snmf=$PREFIX/opt/snmf
 mkdir -p $snmf
+chmod 777 $snmf
 mkdir -p $PREFIX/bin/
 cp -rf ./* $snmf/
-cp  $ssnmf/*.pm ../../lib/perl5/5.22.0/
-sed -i.bak '1 s|^.*$|#!/usr/bin/env perl|g' $snmf/Snmf.pl
-rm -f $snmf/Snmf.bak
 chmod +x $snmf/snmf.sh
 chmod +x $snmf/plink
 chmod +x $snmf/Snmf.pl
-ln -s $snmf/snmf.sh $PREFIX/bin/
+bash $snmf/snmf.sh vcf output logs best_k_output best_k_logfile kmin kmax groups threshold_group >> run.sh 
+ln -rs $snmf/run.sh $PREFIX/bin/
